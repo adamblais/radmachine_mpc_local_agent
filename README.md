@@ -1,5 +1,7 @@
 # RadMachine MPC Test Packs
 
+<img width="1406" height="767" alt="image" src="https://github.com/user-attachments/assets/e8f9f48c-9359-46a4-ac64-b7f153d87460" />
+
 Community-contributed RadMachine test packs for automating MPC (Machine Performance Check) result uploads using the RadMachine Local Agent. These test lists are designed to mirror the layout of results in the Varian MPC application.
 
 > **Contributions welcome.** If you adapt these test packs for your clinic or add support for additional energies or machine types, please consider submitting a pull request so others can benefit.
@@ -105,6 +107,7 @@ The tolerances and action limits included in these test packs are configured to 
 
 - **Machine-specific MLC counts:** The TrueBeam and Edge test packs differ due to differing MLC leaf counts. Do not use the TRBM pack on an Edge unit or vice versa, as MLC-related tests will not map correctly.
 - **Energy coverage:** Only the energies listed above are included. If your unit uses energies not covered here (e.g., 18 MV, or other electron energies), you will need to create additional test lists manually or adapt the existing ones.
+- **Nested test lists:** Tests are organized using nested lists to mirror the MPC app layout. Lists with many entries, such as individual MLC offsets, are collapsed by default to reduce visual clutter.
 
 ---
 
