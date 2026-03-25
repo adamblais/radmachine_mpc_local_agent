@@ -18,9 +18,9 @@ Community-contributed RadMachine test packs for automating MPC (Machine Performa
 
 ### Why is 6X handled separately?
 
-The 6X Beam Check & Geometry is split out from `mpc_beam_checks.tpk` for two reasons:
+The 6X Beam Check is split out from `mpc_beam_checks.tpk` for two reasons:
 
-1. RadMachine does not allow a single MPC Check Type to map to more than one test list. This means *6MV - Beam Check* and *Beam & Geometry* cannot both be mapped to the same test list — yet we want all 6X beam check results (whether run with or without geometry) captured in one place for consistent trending and charting. The solution is to map both MPC Check Types to the same *6X Beam & Geometry* test list, so that regardless of which check type triggers the upload, results always land in one place.
+1. RadMachine does not allow a single MPC Check Type to map to more than one test list. This means that when 6X Beam Check and Geometry are run together (as they frequently are), there is no way to separate them into different test lists. Yet we want all 6X beam check results (whether run with or without geometry) captured in one place for consistent trending and charting. The solution is to map both MPC Check Types to the same *6X Beam & Geometry* test list, so that regardless of which check type triggers the upload, results always land in one place.
 2. In most clinical workflows, the 6X beam check and geometry check are performed together anyway.
 
 If a 6X Beam Check is performed *without* geometry, it will still upload to the 6X Beam & Geometry test list — geometry tests will simply be marked as *Not Done* for that session.
@@ -89,7 +89,7 @@ Go to **Data Administration → Local Agent → MPC & QA Device Mapping** and cr
 | Other | 12MeV - Beam Check | MPC Beam Check :: 12 MeV | MPC Beam Check Upload |
 | Other | 18MeV - Beam Check | MPC Beam Check :: 18 MeV | MPC Beam Check Upload |
 
-> **Note on the Modality column:** The available modalities are pre-populated from the modalities assigned to your unit in **Data Administration → Units → Edit Unit**. The exact entries you see may vary. I'm not certain, but I believe, at minimum, RadMachine requires a Beam Check mapping for each photon modality that is actively in use on the unit.
+> **Note on the Modality column:** The available modalities are pre-populated from the modalities assigned to your unit in **Data Administration → Units → Edit Unit**. The exact entries you see may vary. I'm not certain, but I believe, at minimum, RadMachine requires a mapping for each photon modality that is actively in use on the unit.
 
 > **Note on the dual 6X mapping:** You will notice that both *6MV - Beam Check* and *Beam & Geometry* map to the same test list. This is intentional — see [Why is 6X handled separately?](#why-is-6x-handled-separately) above.
 
