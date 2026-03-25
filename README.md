@@ -4,6 +4,8 @@
 
 Community-contributed RadMachine test packs for automating MPC (Machine Performance Check) result uploads using the RadMachine Local Agent. These test lists are designed to mirror the layout of results in the Varian MPC application.
 
+Adapted in part from the mpc_beam_checks.tpk pack shared by Radformation at [github.com/Radformation/Radmachine-Test-Packs](https://github.com/Radformation/Radmachine-Test-Packs).
+
 > **Contributions welcome.** If you adapt these test packs for your clinic or add support for additional energies or machine types, please consider submitting a pull request so others can benefit.
 
 ---
